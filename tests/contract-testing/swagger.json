@@ -1,0 +1,60 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Blacksmith Service API",
+    "version": "1.0.0",
+    "description": "API for the Blacksmith Service in the D&D world"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000",
+      "description": "Local development server"
+    }
+  ],
+  "paths": {
+    "/sword/masterwork": {
+      "get": {
+        "summary": "Get a Masterwork Sword",
+        "description": "Retrieves a masterwork sword from the blacksmith",
+        "operationId": "GetMasterworkSword",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sword"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Sword not found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Sword": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the sword"
+          },
+          "damage": {
+            "type": "integer",
+            "description": "The damage value of the sword",
+            "format": "int32"
+          }
+        },
+        "required": [
+          "name",
+          "damage"
+        ]
+      }
+    }
+  }
+}

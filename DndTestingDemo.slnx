@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="src/test-doubles-demo/TestDoublesDemo/TestDoublesDemo.csproj" />
+  <Project Path="tests/test-doubles-demo/TestDoublesDemo.Tests/TestDoublesDemo.Tests.csproj" />
+  <Project Path="src/property-based-demo/PropertyBasedDemo/PropertyBasedDemo.csproj" />
+  <Project Path="tests/property-based-demo/PropertyBasedDemo.Tests/PropertyBasedDemo.Tests.csproj" />
+  <Project Path="tests/contract-testing/ContractTestingDemo.Tests/ContractTestingDemo.Tests.csproj" />
+</Solution>
